@@ -66,7 +66,7 @@ class Player:
     def gen_food(self):
         if not self.food:
             while True:
-                pos = Vector(random.randint(0, self.width // self.size) * self.size, random.randint(0, self.width // self.size) * self.size)
+                pos = Vector(random.randint(0, self.width // self.size - 1) * self.size, random.randint(0, self.width // self.size - 1) * self.size)
 
                 if pos not in self.body:
                     self.food = pos
